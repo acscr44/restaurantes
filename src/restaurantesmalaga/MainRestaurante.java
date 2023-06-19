@@ -22,6 +22,7 @@ public class MainRestaurante {
 		lRestaurante = new ArrayList<>();
 		for (String linea : lineas) { // for each
 			numlinea += 1;
+			// Probar con módulo de 8 en lugar de un número que se incrementa.
 			switch (numlinea) {
 			case 1:
 				restauranteAux.setNombre(linea);
