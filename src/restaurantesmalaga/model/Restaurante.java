@@ -99,4 +99,31 @@ public class Restaurante {
 		this.especialidades = especialidades;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		boolean iguales = false;
+			if (obj!=null) {
+				if (obj instanceof Restaurante r) {  // Si obj es instancia de Restaurante, entonces r es creado como Restaurante.
+					iguales = this.direccion.equals(r.direccion);
+				}
+			}
+		
+		return iguales;
+	}
+	
+	@Override
+	public String toString() {
+		return "Restaurante [nombre=" + nombre + 
+					", direccion=" + direccion + 
+					", web=" + web + 
+					", fichaGoogle=" + fichaGoogle + 
+					", latitud=" + latitud + 
+					", longitud=" + longitud + 
+					", barrio=" + barrio + 
+					", especialidades=" + especialidades + 
+					"]";
+	}
+	
+
 }
