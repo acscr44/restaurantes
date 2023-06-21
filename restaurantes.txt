@@ -1,6 +1,7 @@
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+8.95
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -9,6 +10,7 @@ hamburguesas, patatas fritas, helados
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+9.75
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -17,6 +19,7 @@ hamburguesas, patatas fritas, helados
 KFC
 KFC Calle Larios
 www.kfc.com
+24.99
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -25,6 +28,7 @@ platos variados, bebidas, postres
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+12.95
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -33,6 +37,7 @@ hamburguesas, patatas fritas, helados
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+11.95
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -41,6 +46,7 @@ hamburguesas, patatas fritas, helados
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+9.75
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -49,6 +55,7 @@ hamburguesas, patatas fritas, helados
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+8.25
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -57,6 +64,7 @@ hamburguesas, patatas fritas, helados
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+8.95
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -65,6 +73,7 @@ hamburguesas, patatas fritas, helados
 KFC
 KFC Plaza Mayor
 www.kfc.com
+20.95
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -73,6 +82,7 @@ platos variados, bebidas, frutas, postres
 McDonalds
 McDonalds Plaza Mayor
 www.mcdonalds.com
+15.00
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -81,6 +91,7 @@ hamburguesas, patatas fritas, helados
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+11
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -89,6 +100,7 @@ hamburguesas, patatas fritas, helados, frutas
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+10
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
@@ -97,6 +109,7 @@ hamburguesas, patatas fritas, helados
 McDonalds
 McDonalds Plaza de la Marina
 www.mcdonalds.com
+13.85
 https://goo.gl/maps/yzKMGxkYMzZBMPfD7
 36.7313424
 -4.4578394
