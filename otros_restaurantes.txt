@@ -1,0 +1,90 @@
+La Parrilla
+Calle Larios 10
+www.laparrilla.com
+20
+https://goo.gl/maps/DUmVjnSZeX6Y9n448
+36.720123
+-4.418562
+Centro
+Carnes a la parrilla, ensaladas, postres caseros
+El Tapeo Andaluz
+Calle Granada 25 
+www.eltapeoandaluz.com
+15
+https://goo.gl/maps/DUmVjnSZeX6Y9n448
+36.720982
+-4.419782
+Centro
+Tapas variadas, paella, vinos locales
+Sabor Mediterráneo
+Avenida de la Malagueta 50
+www.sabormediterraneo.com
+18
+https://goo.gl/maps/DUmVjnSZeX6Y9n448
+36.707836
+-4.411243
+Malagueta
+Pescados frescos, mariscos, postres mediterráneos
+La Terraza de María
+Calle Alcazabilla 15 
+www.laterrazademaria.com
+18
+https://goo.gl/maps/DUmVjnSZeX6Y9n448
+36.723528
+-4.413619
+Centro
+Cocina internacional, sushi, cócteles
+El Rinconcito Andaluz
+Calle Carretería 35 
+www.elrinconcitoandaluz.com
+25
+https://goo.gl/maps/DUmVjnSZeX6Y9n448
+36.723931
+-4.422795
+Centro
+Gazpacho, pescaíto frito, flamenco en vivo
+La Malagueta
+Paseo de Reding 22 
+www.restaurantelamalagueta.com
+30
+https://goo.gl/maps/7D3ZfpgNSNE4nK9f9
+36.721957
+-4.405479
+Malagueta
+Mariscos frescos, arroces, postres caseros
+El Patio Andaluz
+Calle San Juan 15 
+www.elpatioandaluz.com
+25
+https://goo.gl/maps/XkwULYoNpmL4sEaM8
+36.723611
+-4.422222
+Centro
+Tapas tradicionales, carnes a la brasa, flamenco en vivo
+La Cueva del Pescador
+Paseo Marítimo 50 
+www.lacuevadelpescador.com
+35
+https://goo.gl/maps/xDQ6rFesMScyNQpE8
+36.622035
+-4.503851
+Torremolinos
+Mariscos frescos, pescados a la parrilla, postres de la casa
+El Mirador de la Montaña
+Carretera de la Sierra Km 8 
+www.elmiradordelamontana.com
+40
+https://goo.gl/maps/xPuh6HsyiH3vjMyFA
+36.768415
+-4.442149
+Montaña
+Cocina de autor, vistas panorámicas, menú degustación
+La Taberna del Puerto
+Puerto Marina Benalmádena
+www.latabernadelpuerto.com
+20
+https://goo.gl/maps/9pZz22E7kjz8RUut6
+36.596257
+-4.514012
+Benalmádena
+Tapas marineras, pescados fritos, sangría casera

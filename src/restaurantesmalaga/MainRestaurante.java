@@ -19,7 +19,8 @@ import restaurantesmalaga.model.Restaurante;
 
 public class MainRestaurante {
 
-	private static final String RUTA_FICHERO = "restaurantes.txt";
+//	private static final String RUTA_FICHERO = "restaurantes.txt";
+	private static final String RUTA_FICHERO = "otros_restaurantes.txt";
 
 	public static List<Restaurante> cargarRestaurantes(List<String> lineas) {
 		List<Restaurante> lRestaurante = null;
@@ -169,7 +170,7 @@ public class MainRestaurante {
 				System.out.println("\t" + elem.getPrecioMedio());
 				// }
 			}
-			// Orden NATURAL: Metodo sort() para interface Comparable<>
+			// Orden NATURAL: método sort() para interface Comparable<> y método (Override) compareTo()
 			Collections.sort(listRest);  // NATURAL
 			System.out.println("Los restaurantes ORDENADOS [NATURAL] que tienen un precio según su criterio son:");
 			for (Restaurante elem : buscarPorPrecioMedio(listRest, 10.0f)) {
@@ -178,7 +179,7 @@ public class MainRestaurante {
 				System.out.println("\t" + elem.getPrecioMedio());
 				// }
 			}
-			
+			// Orden TOTAL: método sort() para interface Comparator<> y método (Override) compare()
 			System.out.println("Los restaurantes ORDENADOS [TOTAL] que tienen un precio según su criterio son:");
 			ComparadorRestaurantes cr = new ComparadorRestaurantes();
 			Collections.sort(listRest, cr);  // TOTAL
