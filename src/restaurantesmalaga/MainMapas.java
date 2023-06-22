@@ -24,28 +24,6 @@ public class MainMapas {
 	private static final String RUTA_FICHERO = "otros_restaurantes.txt";
 	
 	
-	public static Map<String, List<Restaurante>> crearMapRestaurantePorBarrios (List<Restaurante> lr){
-		Map<String, List<Restaurante>> mapa = new HashMap<>();
-		
-		// recorro la lista
-		// si el barrio ya está en el mapa añado restaurante a esa lista
-		// si no, creo lista nueva y add ese restaurante
-		for (Restaurante r : lr)
-		{
-			List<Restaurante> lrb = mapa.get(r.getBarrio());
-			if(lrb != null) {
-				System.out.println("ya existen restaurantes con ese barrio");
-				lrb.add(r);
-			} else {
-				List<Restaurante> lnueva = new ArrayList<>();
-				lnueva.add(r);
-				mapa.put(r.getBarrio(), lnueva);
-			}
-		}
-		
-		return mapa;	
-	}
-	
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Cargar la lista de restaurantes del fichero
@@ -81,10 +59,7 @@ public class MainMapas {
 			// TODO Partiendo de la lista de Restaurantes, hacer un mapa, 
 			// donde la clave sea el barrio y el valor la lista de restaurantes de ese barrio.
 
-			// Obtengo una lista con los nombres de los barrios. 
-			for(Restaurante r: listRest) {
-				System.out.println(r.getBarrio());
-			}
+			
 			
 			List<Restaurante> listBarrio = null;
 			listBarrio = new ArrayList<>();
@@ -97,14 +72,16 @@ public class MainMapas {
 			for(Restaurante r : listRest) {
 				setBarrios.add(r.getBarrio());
 			}
-			System.out.println("Los barrios encontrados son: " + setBarrios);
 			
-			// Cargo los Restaurantes en un lista según el Barrio.
+			// Obtengo una lista con los nombres de los barrios. 
+			System.out.println("Los barrios encontrados son: " + setBarrios);
 			int pos = 0;
 			setBarrios.forEach(brr -> {
 				System.out.println(brr.toString());  
 			});
+
 			
+			// Cargo los Restaurantes en un lista según el Barrio.
 			while( pos < setBarrios.size()) {
 				String brr = setBarrios.stream().iterator().next();
 				for (Restaurante r : listRest) {
@@ -123,27 +100,7 @@ public class MainMapas {
 				entrada.getValue().forEach(System.out::println);
 			});			
 			
-			
-			
-			
-			
-			
-			// ======================================= Clase mapaRestaurantePorBarrios ===========================
-			
-			Map<String, List<Restaurante>> mapaRestaurantesPorBarrios = null;
-			mapaRestaurantesPorBarrios = crearMapRestaurantePorBarrios(listRest);
-			Set<String> clavesMapa = mapaRestaurantesPorBarrios.keySet();
-			for (String barrio : clavesMapa) {
-				List<Restaurante> lrb =  mapaRestaurantesPorBarrios.get(barrio);
-				System.out.println("BARRIO = " + barrio);
-				for ( Restaurante rb : lrb) {
-					System.out.println(rb.toString());
-				}
-			}
-			
-			
-			
-			// ======================================= ===========================
+
 			
 			
 			} else {
