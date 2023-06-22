@@ -13,7 +13,7 @@ import java.util.Set;
 
 import restaurantesmalaga.model.Restaurante;
 
-public class MainMapas {
+public class MainMapas_val {
 	
 	
 	public static boolean mostrarMapa() {
@@ -62,73 +62,7 @@ public class MainMapas {
 			List<Restaurante> listRest = MainRestaurante.cargarRestaurantes(lineas);
 			
 			
-			// Creación de Mapa a partir de la lista de Restaurantes.
-			// Map<k, v> es una interface.
-			Map<String, Restaurante> mapRest = null;
-			// Clases que implementa esta interface: Treemap, LinkedHashMap, HashMap
-			mapRest = new HashMap<>();
-			
-			// ForEach para leer y grabar en el HashMap la lista usando como clave el nombre del Rest.
-			for (Restaurante r : listRest) {
-				mapRest.put(r.getNombre(), r);
-			}
-			System.out.println(mapRest);
-			// Mostramos algún restaurante cuya clave coincida.
-			Restaurante rp = mapRest.get("La Parrilla");
-			System.out.println(rp.toString()); 
-			
-			
-			// TODO Partiendo de la lista de Restaurantes, hacer un mapa, 
-			// donde la clave sea el barrio y el valor la lista de restaurantes de ese barrio.
-
-			// Obtengo una lista con los nombres de los barrios. 
-			for(Restaurante r: listRest) {
-				System.out.println(r.getBarrio());
-			}
-			
-			List<Restaurante> listBarrio = null;
-			listBarrio = new ArrayList<>();
-			Map<String, List<Restaurante>> mapRestBarrio = null;
-			mapRestBarrio = new HashMap<>();
-			
-			// Hacer una mapa<k, v> donde las k sea un SET donde no se repita ninguna clave.
-			Set<String> setBarrios = null;
-			setBarrios = new HashSet<>();
-			for(Restaurante r : listRest) {
-				setBarrios.add(r.getBarrio());
-			}
-			System.out.println("Los barrios encontrados son: " + setBarrios);
-			
-			// Cargo los Restaurantes en un lista según el Barrio.
-			int pos = 0;
-			setBarrios.forEach(brr -> {
-				System.out.println(brr.toString());  
-			});
-			
-			while( pos < setBarrios.size()) {
-				String brr = setBarrios.stream().iterator().next();
-				for (Restaurante r : listRest) {
-					System.out.println(brr);
-					if (r.getBarrio().equals(brr)) {
-						listBarrio.add(r);
-					}
-				}				
-				mapRestBarrio.put(brr, listBarrio);
-				pos+=1;
-			}
-			
-			mapRestBarrio.entrySet().forEach(entrada -> 
-			{
-				entrada.getKey(); 
-				entrada.getValue().forEach(System.out::println);
-			});			
-			
-			
-			
-			
-			
-			
-			// ======================================= Clase mapaRestaurantePorBarrios ===========================
+			// ======================================= Método mapaRestaurantePorBarrios ===========================
 			
 			Map<String, List<Restaurante>> mapaRestaurantesPorBarrios = null;
 			mapaRestaurantesPorBarrios = crearMapRestaurantePorBarrios(listRest);
