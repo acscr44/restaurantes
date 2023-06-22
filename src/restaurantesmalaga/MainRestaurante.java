@@ -229,7 +229,7 @@ public class MainRestaurante {
 			// Mientras no se incluya el método toString() en la clase Restaurante se
 			// obtendrá el nombre_canónico@dirección_memoria.
 			if (!listRest.isEmpty()) {
-
+				System.out.println(r.toString());
 			}
 		}
 	}
