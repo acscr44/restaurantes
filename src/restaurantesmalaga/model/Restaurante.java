@@ -2,8 +2,8 @@ package restaurantesmalaga.model;
 
 import java.util.Arrays;
 import java.util.List;
-// Comparable para orden NATURAL
-// Comparator para orden TOTAL
+// Interface Comparable<> para orden NATURAL
+// Interface Comparator<> para orden TOTAL
 public class Restaurante implements Comparable<Restaurante> {
 	// id ¿?
 	private String nombre;
@@ -145,10 +145,10 @@ public class Restaurante implements Comparable<Restaurante> {
 	public int compareTo(Restaurante r) {
 		// TODO Auto-generated method stub
 		int num = 0; 
-			if(this.precioMedio < r.precioMedio) {
+			if((float)this.precioMedio < (float)r.precioMedio) {
 				num=-1;
 			}
-			else if(this.precioMedio > r.precioMedio) {
+			else if((float)this.precioMedio > (float)r.precioMedio) {
 				num=1;
 			}
 		return num;

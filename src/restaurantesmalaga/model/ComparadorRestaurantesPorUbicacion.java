@@ -3,7 +3,7 @@ package restaurantesmalaga.model;
 import java.util.Comparator;
 
 // Orden TOTAL: implementar interface Comparator<>
-public class ComparadorRestaurantes implements Comparator<Restaurante> {
+public class ComparadorRestaurantesPorUbicacion implements Comparator<Restaurante> {
 
 	// Comparador para un solo criterio (por Nombre).
 	@Override

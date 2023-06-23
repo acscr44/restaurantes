@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -16,11 +16,6 @@ import restaurantesmalaga.model.Restaurante;
 public class MainMapas_val {
 	
 	
-	public static boolean mostrarMapa() {
-		
-		return false;
-	}
-	
 	private static final String RUTA_FICHERO = "otros_restaurantes.txt";
 	
 	
@@ -28,15 +23,20 @@ public class MainMapas_val {
 		Map<String, List<Restaurante>> mapa = new HashMap<>();
 		
 		// recorro la lista
-		// si el barrio ya está en el mapa añado restaurante a esa lista
-		// si no, creo lista nueva y add ese restaurante
+			// si el barrio ya está en el mapa 
+				// añado restaurante a esa lista
+			// si no, creo lista nueva y add ese restaurante
 		for (Restaurante r : lr)
 		{
+			// Lista auxiliar en la que se identifican los barrios que ya se han incorporado.
 			List<Restaurante> lrb = mapa.get(r.getBarrio());
 			if(lrb != null) {
 				System.out.println("ya existen restaurantes con ese barrio");
+				// Si el barrio ya existe en la lrb, solo queda añadir el siguiente restaurante. 
 				lrb.add(r);
 			} else {
+				// Lista nueva que va registrando un restaurante nuevo de ese barrio concreto, por 
+				// el cual después haremos un put con el primer restaurante que inicia la lista.
 				List<Restaurante> lnueva = new ArrayList<>();
 				lnueva.add(r);
 				mapa.put(r.getBarrio(), lnueva);
@@ -46,6 +46,71 @@ public class MainMapas_val {
 		return mapa;	
 	}
 	
+	/*
+	 * Hacer un método con el método mapa___restaurante de ayer que nos devuelva los más caros de cada barrio. 
+	 * Leida esa estructura obtengamos una lista con el más caro de cada barrio. 
+	 */
+	public static List<Restaurante> getRestauranteMasCarosPorBarrio(Map<String, List<Restaurante>> mapaR){
+		List<Restaurante> listaCaros = null;
+		// TODO recorrer el mapa por barrios y quedarme con el más caro de cada barrio.
+		
+		listaCaros = new ArrayList<>();
+		// barrios == clavesMapaR
+		Set<String> barrios = mapaR.keySet(); 
+		for(String key : barrios) {
+			// Obtenemos el value del mapa para esa key.
+			List<Restaurante> lrb = mapaR.get(key);
+			// Obtener el restaurante más caro de esa lista.
+			Restaurante rMasCaro = obtenerMasCaro(lrb);
+			listaCaros.add(rMasCaro);
+		}
+		
+		
+		return listaCaros;
+	}
+	
+	private static Restaurante obtenerMasCaro(List<Restaurante> lrb) {
+		Restaurante rMasCaro = null;
+		float precioMayor = 0;
+		for (Restaurante r : lrb) {
+			if(r.getPrecioMedio()>precioMayor) {
+				rMasCaro = r;
+				precioMayor = r.getPrecioMedio();
+			}
+		}
+		return rMasCaro;
+	}
+
+	private static Restaurante obtenerMasCaro2(List<Restaurante> lrb) {
+		Restaurante rMasCaro = null;
+		// Primero realizamos una ordenación por el método compareTo que hicimos (@override)  
+		Collections.sort(lrb);
+		// Cogemos el último
+		rMasCaro = lrb.get(lrb.size()-1);
+		return rMasCaro;
+	}
+	
+	private static Restaurante obtenerMasCaro_lambda(List<Restaurante> lrb) {
+		Restaurante rMasCaro = null;
+		
+		
+		return rMasCaro;
+	}
+	
+
+	public static void mostrarMapa(Map<String, List<Restaurante>> mapaRestaurantesPorBarrios) {
+		// Recorrer el mapa consiste en obtener todas las claves (keySet: las keys de
+		// los mapas no se pueden repetir.)
+		Set<String> clavesMapa = mapaRestaurantesPorBarrios.keySet();
+		for (String barrio : clavesMapa) {
+			// El metodo Map<k, v>.get() devuelve el valor para esa clave
+			List<Restaurante> lrb = mapaRestaurantesPorBarrios.get(barrio);
+			System.out.println("BARRIO = " + barrio);
+			for (Restaurante rb : lrb) {
+				System.out.println(rb.toString());
+			}
+		}
+	}
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Cargar la lista de restaurantes del fichero
@@ -61,23 +126,19 @@ public class MainMapas_val {
 			// restaurante.
 			List<Restaurante> listRest = MainRestaurante.cargarRestaurantes(lineas);
 			
-			
+	
 			// ======================================= Método mapaRestaurantePorBarrios ===========================
+			Map<String, List<Restaurante>> mapaRestPorBarrios = null;
 			
-			Map<String, List<Restaurante>> mapaRestaurantesPorBarrios = null;
-			mapaRestaurantesPorBarrios = crearMapRestaurantePorBarrios(listRest);
-			Set<String> clavesMapa = mapaRestaurantesPorBarrios.keySet();
-			for (String barrio : clavesMapa) {
-				List<Restaurante> lrb =  mapaRestaurantesPorBarrios.get(barrio);
-				System.out.println("BARRIO = " + barrio);
-				for ( Restaurante rb : lrb) {
-					System.out.println(rb.toString());
-				}
+			mapaRestPorBarrios = crearMapRestaurantePorBarrios(listRest);
+			
+			mostrarMapa(mapaRestPorBarrios);			
+			// ======================================= Método getRestauranteMasCarosPorBarrio ===========================
+			
+			System.out.println("\nLista de los restaurantes más caros por barrio: ");
+			for(Restaurante r : getRestauranteMasCarosPorBarrio(mapaRestPorBarrios)) {
+				System.out.println(r.toString());
 			}
-			
-			
-			
-			// ======================================= ===========================
 			
 			
 			} else {

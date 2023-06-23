@@ -101,7 +101,12 @@ public class MainMapas {
 			});			
 			
 
-			
+			// TODO: EJERCICIOS OPCIONALES PRÁCTICA 
+			/*
+			 * 	1) Haced un método que reciba el mapa de restaurantes, un barrio y me diga el precio medio de un barrio.
+			 * 	2) Haced un método que reciba el mapa de restaurantes y me diga el restaurante
+			 * 		más barato de todos los barrios.
+			 */
 			
 			} else {
 			System.out.println("NO EXISTE el fichero en esa ruta :( ");

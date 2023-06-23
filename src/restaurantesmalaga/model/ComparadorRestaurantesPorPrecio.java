@@ -3,14 +3,20 @@ package restaurantesmalaga.model;
 import java.util.Comparator;
 
 // Orden TOTAL: implementar interface Comparator<>
-public class ComparadorRestaurantes implements Comparator<Restaurante> {
+public class ComparadorRestaurantesPorPrecio implements Comparator<Restaurante> {
 
 	// Comparador para un solo criterio (por Nombre).
 	@Override
 	public int compare(Restaurante res1, Restaurante res2) {
 		// TODO Auto-generated method stub
-		
-		return res1.getNombre().compareTo(res2.getNombre());
+		int num = 0; 
+		if((float)res1.getPrecioMedio() < (float)res2.getPrecioMedio()) {
+			num=-1;
+		}
+		else if((float)res1.getPrecioMedio() > (float)res2.getPrecioMedio()) {
+			num=1;
+		}
+	return num;
 	}
 
 	//Comparador para más de un criterio.
