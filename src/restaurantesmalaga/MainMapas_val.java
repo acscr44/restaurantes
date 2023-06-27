@@ -81,6 +81,7 @@ public class MainMapas_val {
 		return rMasCaro;
 	}
 
+	@SuppressWarnings("unused")
 	private static Restaurante obtenerMasCaro2(List<Restaurante> lrb) {
 		Restaurante rMasCaro = null;
 		// Primero realizamos una ordenación por el método compareTo que hicimos (@override)  
@@ -90,6 +91,7 @@ public class MainMapas_val {
 		return rMasCaro;
 	}
 	
+	@SuppressWarnings("unused")
 	private static Restaurante obtenerMasCaro_lambda(List<Restaurante> lrb) {
 		Restaurante rMasCaro = null;
 		
